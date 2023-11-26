@@ -6,7 +6,7 @@ Things yet to be done:
 
 These updates will be added ASAP.
 
-Built using the React.js framework,html and CSS.
+Built using the React.js library,html and CSS.
 
 **************************************************************************************************************
 
