@@ -1,0 +1,88 @@
+*{
+   background-image: url('../assets/headBg.jpg'); 
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+.mainPage{
+   display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100dvh;
+   width: 50%;
+}
+
+.content{
+   border-radius: 30px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content:space-around;
+   align-items: center;
+   border-width: 1px;
+   border-style: solid;
+   height: 70%;
+   width: 60%;
+   color: rgba(255, 255, 255, 0.268);
+}
+
+
+.dataForm{
+   display: flex;
+   flex-direction: column;
+}
+.title{
+   margin-top: 1.5rem;
+   color: rgba(255, 255, 255, 0.849);
+}
+
+.dataForm input{
+   text-align: center;
+   box-sizing: border-box;
+   border-radius: 1rem;
+   border-style: solid;
+   color: white;
+   border-width: 1px;
+   margin-top: 1.5rem;
+   height: 2rem;
+   text-indent: 5px;
+}
+.dataForm label{
+   color:rgba(255, 255, 255, 0.746);
+}
+
+
+.content button {
+   color: white;
+   border-style: solid;
+   align-self: center;
+   height: 2rem;
+   width: 5.5rem;
+   margin-top: 1rem;
+   border-width: 1px;
+   border-color: rgba(255, 255, 255, 0.155);
+   border-radius: 1.2rem;
+   background: linear-gradient(to right,rgba(255, 255, 255, 0.078),rgba(128, 128, 128, 0.193));
+ }
+
+ .content button:hover {
+   color: white;
+   border-style: solid;
+   height: 2rem;
+   width: 5.5rem;
+   border-width: 1px;
+   border-radius: 1.2rem;
+   background: linear-gradient(to right,rgba(255, 255, 255, 0.172),rgba(128, 128, 128, 0.242));
+ }
+
+ .content a{
+   color: rgba(240, 248, 255, 0.578);
+   margin-bottom: 2.5rem;
+ }
+
+ 
