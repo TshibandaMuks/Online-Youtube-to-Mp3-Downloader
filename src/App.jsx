@@ -7,32 +7,36 @@ const App = () =>{
 
   const inputUrlRef = useRef()
   const [urlResult, setUrlResult] = useState(null)
+  const [downloadReady,setDownloadReady] = useState('nothing to download enter a valid link')
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    
     const youtubeID = youtube_parser(inputUrlRef.current.value)
-
     console.log(youtubeID)
-
+    
+  
     const options = {
-      method: 'get', 
-      url: 'https://youtube-mp36.p.rapidapi.com/dl',
+      method: 'GET',
+      url: 'https://youtube-mp3-downloader2.p.rapidapi.com/ytmp3/ytmp3/',
       params: {
-        id: youtubeID
+        url: inputUrlRef.current.value
       },
       headers: {
-        'X-RapidAPI-Key':
-         'b06b5f060emsha99de0e5505582ap16b128jsn07c6776f2f9b',
-        'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
+        'X-RapidAPI-Key': import.meta.env.VITE_RAPID_API_KEY,
+        'X-RapidAPI-Host': 'youtube-mp3-downloader2.p.rapidapi.com'
       }
-    }
+    };
     
-   axios(options)
-    .then(res => setUrlResult(res.data))
-    .catch(err => console.log(err))
+    axios(options)
+    .then(res => { setUrlResult(res.data.link)
+                   console.log(`response is ${res.data.link}`)
+                   setDownloadReady('Ready! Click here to download')})
+                  .catch(err => console.log(err))
 
     inputUrlRef.current.value = ''
-
   }
 
   return(
@@ -42,10 +46,14 @@ const App = () =>{
     <form onSubmit = {handleSubmit} className="dataForm">
       <label for="searchUrl">Please insert a valid YouTube video URL</label>
       <input ref={inputUrlRef} id="searchUrl" type="text" placeholder="youtube.com/watch?v=dQw4w9WgXcQ"></input>
-      <button type="submit">Search</button>
+      <button type="submit" onClick={() => setDownloadReady('Loading, might take a while please wait...')}>Search</button>
     </form>
 
-    <a>Download</a>
+    
+    <a target="_blank" rel="noreferrer" href={urlResult}>
+        {downloadReady}
+    </a>
+
     
     </div>
     
