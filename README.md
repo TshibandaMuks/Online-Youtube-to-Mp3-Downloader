@@ -1,8 +1,19 @@
-# React + Vite
+The project is 80% complete.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Things yet to be done:
+* Fix the API requests, responses
+* Enable the download button to save files to pc automatically
 
-Currently, two official plugins are available:
+These updates will be added ASAP.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built using the React.js library,html and CSS etc.
+
+**************************************************************************************************************
+
+Pictures of the Website app UI:
+![youtubeToMp3](https://github.com/Tshibanda1/Youtube-to-Mp3-Downloader/assets/118852771/b2c63178-7803-41ec-8b58-1ce97083a6e2)
+
+When a youtube URL is pasted:
+![2youtube](https://github.com/Tshibanda1/Youtube-to-Mp3-Downloader/assets/118852771/760c6858-0079-475d-bc71-3bdd1da81c7b)
+
+
